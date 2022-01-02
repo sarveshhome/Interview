@@ -44,7 +44,8 @@ ngAfterContentChecked(): This is called after external content projected into co
 
 example : 
 
-`const Footer = (props) => {
+`
+const Footer = (props) => {
   return(
   <div>
     <ul>
@@ -52,17 +53,20 @@ example :
     </ul>
   </div>
   )
-}`
+}
+`
 
 Smart Components : Smart components (or container components) on the other hand have a different responsibility
 Because they have the burden of being smart, they are the ones that keep track of state and care about how the app works.
 
-`class App extends Component {
+`
+class App extends Component {
   constructor(props){
     super(props);
     this.state = {pictures : []};
   }
-}`
+}
+`
 
 
 - using controlled components to implement forms.
@@ -90,19 +94,23 @@ A class component must include the extends React.Component statement. This state
 
 The component also requires a render() method, this method returns HTML.
 
-`class Car extends React.Component {
+`
+class Car extends React.Component {
   render() {
     return <h2>Hi, I am a Car!</h2>;
   }
-}`
+}
+`
 
 ## Function component
 
 - A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred
 
-`function Car() {
+`
+function Car() {
   return <h2>Hi, I am a Car!</h2>;
-}`
+}
+`
 
 - Certainly, stateful components can be reused.
 
