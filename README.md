@@ -40,8 +40,11 @@ ngAfterContentChecked(): This is called after external content projected into co
 
 # React
 
-DUMP COMPONENT : Dumb components are also called ‘presentational’ components because their only responsibility is to present something to the DOM
-example : const Footer = (props) => {
+- DUMP COMPONENT : Dumb components are also called ‘presentational’ components because their only responsibility is to present something to the DOM
+
+example : 
+
+`const Footer = (props) => {
   return(
   <div>
     <ul>
@@ -49,17 +52,17 @@ example : const Footer = (props) => {
     </ul>
   </div>
   )
-}
+}`
 
 Smart Components : Smart components (or container components) on the other hand have a different responsibility
 Because they have the burden of being smart, they are the ones that keep track of state and care about how the app works.
 
-class App extends Component {
+`class App extends Component {
   constructor(props){
     super(props);
     this.state = {pictures : []};
   }
-}
+}`
 
 
 - using controlled components to implement forms.
@@ -68,8 +71,8 @@ class App extends Component {
 
 
 
-– Container vs Presentational components
-– Smart vs Dumb compone
+– *Container* vs *Presentational components*
+– *Smart* vs *Dumb compone*
 
 - That means the stateful components are keeping track of changing data
 - stateless components print out what is given to them via props, or they always render the same thing
@@ -82,7 +85,7 @@ Examples of stateless components being reusable
 Can stateful components be reusable?
 
 
-Class Component
+## Class Component
 A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
 
 The component also requires a render() method, this method returns HTML.
@@ -93,7 +96,7 @@ The component also requires a render() method, this method returns HTML.
   }
 }`
 
-
+## Function component
 
 - A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred
 
