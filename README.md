@@ -123,5 +123,68 @@ function Car() {
 
 
 
+# .NET
+
+oops
+-   class scope  - internal  
+internal and public
+
+encapsulation - hiding the data
+abstration- showing the relevant data 
+
+interface - interface has only signature of class and it has no implementation
+            all class drive 
+			inheritance - multiple inheritance support
+			constractor  - no constractor
+			static - no static member , all member are public
+			
+abstract - abstract class can contain with body and without body.
+           inheritance - multiple inheritance not support , only one class inheritance
+		   constractor - default constractor
+		   static - static memeber, member are public, private, internal
+		 
+
+		
+		
+using System;  
+interface A  
+{  
+    void Hello();  
+}  
+interface B  
+{  
+    void Hello();  
+}  
+class Test : A, B  
+{  
+    void A.Hello()  
+    {  
+        Console.WriteLine("Hello to all-A");  
+    }  
+    void B.Hello()  
+    {  
+        Console.WriteLine("Hello to all-B");  
+    }  
+}  
+public class interfacetest  
+{  
+    public static void Main()  
+    {  
+        A Obj1 = new Test();  
+        Obj1.Hello();  
+        B Obj2 = new Test();  
+        Obj2.Hello();  
+    }  
+}		
+		
+
+base keyword is used to access members of the base class from within a derived class 
+       base.calculate
+	   
+	   
+
+	   
+	   
+
 
 
