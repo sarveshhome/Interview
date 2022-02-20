@@ -182,6 +182,20 @@ base keyword is used to access members of the base class from within a derived c
        base.calculate
 	   
 	   
+# SQL
+
+delete from dbo.Emp where EmpID not in(SELECT max(EmpID) as id     
+  FROM [Employee].[dbo].[Emp]
+  group by [name])
+  
+  
+  
+  select top 1 t.salary from 
+(SELECT  top 3 [salary]
+  FROM [Employee].[dbo].[Emp]
+  order by salary desc
+  ) as t order by t.salary 
+
 
 	   
 	   
