@@ -184,11 +184,19 @@ base keyword is used to access members of the base class from within a derived c
 	   
 # SQL
 
+## delete duplicate record
+
 delete from dbo.Emp where EmpID not in(SELECT max(EmpID) as id     
   FROM [Employee].[dbo].[Emp]
   group by [name])
   
   
+delete from dbo.Emp where EmpID not in(SELECT min(EmpID) as id     
+  FROM [Employee].[dbo].[Emp]
+  group by [name])  
+  
+  
+  Get Highest 3 record of employee
   
   select top 1 t.salary from 
 (SELECT  top 3 [salary]
